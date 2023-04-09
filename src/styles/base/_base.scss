@@ -1,0 +1,67 @@
+// RESPONSIVE BREAKPOINTS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: 'inter';
+  font-size: 16px;
+
+  body {
+    font-size: 16px;
+    color: #fff;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  abbr[title],
+  abbr[data-original-title] {
+    text-decoration: none;
+  }
+
+  p,
+  a,
+  div,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  .default-image,
+  .responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .background-grey {
+    background-color: $bg-grey;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .full-height {
+    min-height: calc(100vh - 120px);
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}

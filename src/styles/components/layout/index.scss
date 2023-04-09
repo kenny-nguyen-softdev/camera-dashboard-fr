@@ -1,0 +1,36 @@
+@import '_header';
+@import '_sidebar';
+
+.layout {
+  color: $text-dark;
+  min-height: 100vh;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.main {
+  background: $color-white;
+}
+
+.container {
+  background: #EFEFEF;
+}
+
+.section {
+  @extend .px-4;
+//   max-width: $content-width;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.page-footer {
+  background: $color-white;
+}
+
+.ant-layout {
+  height: 100vh;
+  overflow-y: auto;
+}
+

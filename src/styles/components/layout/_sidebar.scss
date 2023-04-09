@@ -1,0 +1,31 @@
+.ant-layout-sider {
+  background-color: $bg-dark;
+  color: $text-purple;
+  padding-bottom: 0 !important;
+}
+
+.ant-layout-sider-children {
+  background-color: $bg-dark;
+}
+
+.ant-layout-sider-trigger {
+ background-color: $bg-dark !important;
+}
+
+.ant-menu {
+  background-color: $bg-dark;
+  border-right: none;
+}
+
+.ant-menu-item {
+  background-color: $bg-dark !important;
+  border: none !important;
+  font-weight: 400;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $text-purple;
+}

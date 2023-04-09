@@ -1,0 +1,215 @@
+.login-page {
+  background-color: $bg-dark;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+
+  &__bg {
+    background: $bg-dark;
+    width: 200%;
+    height: calc(100% - 330px);
+    display: block;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: 330px;
+    left: -50%;
+    right: -50%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    padding-top: 2%;
+  }
+
+  &__logo {
+    width: 310px;
+    height: 125px;
+    margin-bottom: 27px;
+  }
+
+  &__title {
+    color: $color-dark;
+    text-align: center;
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  .login-form {
+    background: $bg-white 0% 0% no-repeat padding-box;
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 34px 48px;
+    border-radius: 8px;
+    .ant-form {
+      width: 100%;
+      label {
+        // font: $font-label;
+        color: $color-dark;
+      }
+    }
+  }
+}
+
+.login-form {
+  &__title1 {
+    font-family: 'lexend-deca';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $text-grey;
+    margin-bottom: 12px;
+  }
+
+  &__title2 {
+    font-family: 'lexend-deca';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $text-dark;
+    margin-bottom: 12px;
+  }
+
+  &__title3 {
+    font-family: 'lexend-deca';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $text-grey;
+    margin-bottom: 48px;
+  }
+
+  &__contact {
+    color: $text-blue;
+  }
+
+  .ant-form label {
+    color: $color-dark;
+  }
+
+  .ant-input {
+    border: none;
+    border-color: transparent;
+    border-radius: 10px;
+    background: $bg-purple;
+    color: $text-grey;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 400;
+
+    &:hover {
+      border-color: transparent;
+      border-right-width: 0;
+    }
+
+    &::placeholder {
+      font-family: 'lexend-deca';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: left;
+      color: $text-grey;
+    }
+  }
+
+  &__input-email {
+    margin-bottom: 24px;
+  }
+
+  &__input-password {
+    margin-bottom: 24px;
+  }
+
+  .ant-input-affix-wrapper {
+    border: none;
+    border-color: transparent;
+    border-radius: 10px;
+    background: $bg-purple;
+    outline: none !important;
+    box-shadow: none;
+    color: $text-blue;
+  }
+
+  &__login {
+    border: none;
+    height: 45px;
+    background: $bg-blue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: $text-white;
+    margin-bottom: 18px;
+  }
+
+  .ant-input-suffix {
+    border: none;
+  }
+
+  .ant-checkbox-wrapper span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $text-white;
+  }
+
+  .ant-checkbox-input {
+    background: $bg-purple !important;
+  }
+
+  &__stay-connected {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    margin-bottom: 0px;
+    letter-spacing: 0.4px;
+  }
+
+  &__contact {
+    font-family: 'Montserrat';
+    font-style: normal;
+    margin-bottom: 0px;
+    color: $text-dark;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    padding-left: 2px;
+    letter-spacing: 0.2px;
+    a {
+      color: $text-blue;
+    }
+  }
+
+  .login-form__login {
+    &:hover {
+        color: $text-white;
+    }
+  }
+
+  .login-form__forgot {
+    &:hover {
+      color: $text-green;
+    }
+  }
+}
+.ant-checkbox-inner {
+  border: none !important;
+  background-color: $bg-purple !important;
+}
+.ant-input-affix-wrapper {
+  line-height: 2.5 !important;
+}
