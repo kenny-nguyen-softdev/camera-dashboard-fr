@@ -10,9 +10,9 @@ const Home = () => {
       <main className="home-page">
         <div className="home-page__container">
           <div className="home-page__">
-            <Row>
-              <Col span={12}>box 1</Col>
-              <Col span={12}>box 2</Col>
+            <Row className="home-page__box">
+              <Col span={12} className="name-box">Tổng Camera</Col>
+              <h2>4</h2>
             </Row>
             <Row>
               <Col span={12}>
