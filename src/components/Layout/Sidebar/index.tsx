@@ -26,7 +26,7 @@ const Sidebar = () => {
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(value)}
     >
-      <figure className="login-page__logo">
+      <figure className="login-page__logo-sidebar">
         <img src={Logo} alt="logo" width={200} height={160} />
       </figure>
       <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">

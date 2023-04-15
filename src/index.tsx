@@ -7,6 +7,10 @@ import { HelmetProvider } from "react-helmet-async";
 import store from "./store";
 import "./styles/main.scss";
 
+
+
+
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

@@ -15,7 +15,7 @@ const LoginForm: React.FC = () => {
         <div className="login-page__container">
           <div className="login-form" id="login-form">
             <figure className="login-page__logo">
-              <img src={Logo} alt="logo" width={310} height={135} />
+              <img src={Logo} alt="logo" width={200} height={170} />
             </figure>
             <h3 className="login-form__title1">Camera Dashboard</h3>
             <h1 className="login-form__title2">Log In</h1>

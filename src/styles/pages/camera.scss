@@ -1,1 +1,64 @@
-/* Style for camera component */
+.camera-page__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 36px;
+    width: 100%;
+  }
+  
+  .camera-page__title h2 {
+    padding-left: 10px;
+    color: #252733;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 24px;
+    flex-grow: 1;
+  }
+  .camera-page__icon-title {
+    font-size: 25px;
+    padding-left: 15px;
+    color: #252733;
+  }
+
+  .camera-page__icons {
+    display: flex;
+    margin-right: 20px;
+    color: #C5C7CD;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .camera-page__icon-container {
+    padding: 5px;
+  }
+  .camera-page__icon-container:hover {
+    color: #252733;
+    cursor: pointer;
+  }
+  
+  .camera-page__user {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .camera-page__user-name {
+    color: #252733;
+    margin-right: 10px;
+  }
+  .camera-page__user-avatar{
+    margin-right: 25px;
+    border-radius: 50%;
+  }
+
+  .camera-page__separator {
+    margin-right: 20px;
+    border: 1px solid #C5C7CD;
+    width: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+  
+  
+  
