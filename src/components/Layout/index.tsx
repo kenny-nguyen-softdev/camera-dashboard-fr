@@ -9,7 +9,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <AntdLayout>
       <Sidebar />
       <AntdLayout className="site-layout">
-        <MainHeader />
+        {/* <MainHeader /> */}
         <Content>{children}</Content>
       </AntdLayout>
     </AntdLayout>

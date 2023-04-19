@@ -8,6 +8,9 @@ import BasePage from "../components/Layout/BasePage/BasePage";
 const Login = lazy(() => import("../pages/Login"));
 const Home = lazy(() => import("../pages/Home"));
 const Camera = lazy(() => import("../pages/Camera"));
+const Warning = lazy(() => import("../pages/Warning"));
+const Region = lazy(() => import("../pages/Region"));
+const Statistic = lazy(() => import("../pages/Statistic"));
 
 const waitFor = (Tag: React.LazyExoticComponent<() => JSX.Element | null>) => (
   <Suspense fallback={<Spinner />}>
@@ -33,6 +36,24 @@ export const routes: AppRouteType[] = [
     auth: false,
     path: "/camera",
     component: Camera,
+  },
+  {
+    name: "Warning",
+    auth: false,
+    path: "/warning",
+    component: Warning,
+  },
+  {
+    name: "Region",
+    auth: false,
+    path: "/region",
+    component: Region,
+  },
+  {
+    name: "Statistic",
+    auth: false,
+    path: "/statistic",
+    component: Statistic,
   },
 ];
 
