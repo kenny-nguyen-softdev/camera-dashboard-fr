@@ -29,3 +29,12 @@
   letter-spacing: 0.2px;
   color: $text-purple;
 }
+.login-page__logo-sidebar {
+  transition: all 0.3s;
+  transform-origin: left center;
+  transform: translateX(0);
+}
+
+.ant-layout-sider-collapsed .login-page__logo-sidebar {
+  transform: translateX(-120%);
+}

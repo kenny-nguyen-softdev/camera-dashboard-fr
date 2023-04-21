@@ -1,1 +1,99 @@
-/*warning page style*/
+.warning-page__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 36px;
+    width: 100%;
+  }
+  
+  .warning-page__title h2 {
+    padding-left: 10px;
+    color: #252733;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 24px;
+    flex-grow: 1;
+  }
+  .warning-page__icon-title {
+    font-size: 25px;
+    padding-left: 15px;
+    color: #252733;
+  }
+
+  .warning-page__icons {
+    display: flex;
+    margin-right: 20px;
+    color: #C5C7CD;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .warning-page__icon-container {
+    padding: 5px;
+  }
+  .warning-page__icon-container:hover {
+    color: #252733;
+    cursor: pointer;
+  }
+  
+  .warning-page__user {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .warning-page__user-name {
+    color: #252733;
+    margin-right: 10px;
+  }
+  .warning-page__user-avatar{
+    margin-right: 25px;
+    border-radius: 50%;
+  }
+
+  .warning-page__separator {
+    margin-right: 20px;
+    border: 1px solid #C5C7CD;
+    width: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+  .warning-list__operation {
+    position: absolute;
+    color: #252733;
+    margin-top: 55px;
+    right: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .warning-list__operation ul {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    justify-content: end;
+  }
+  
+  .warning-list__operation li {
+    list-style: none;
+    margin-left: 35px;
+  }
+  .warning-list__operation li:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: scale(1.2);
+    transform-origin: center;
+  }
+  .warning-list__check-icon,
+  .warning-list__delete-icon,
+  .warning-list__setting-icon {
+    margin-right: 5px;
+    color: #999;
+  }
+  .warning-list__operation li:hover .warning-list__check-icon,
+  .warning-list__operation li:hover .warning-list__delete-icon,
+  .warning-list__operation li:hover .warning-list__setting-icon {
+    color: #252733;
+  }

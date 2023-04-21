@@ -1,1 +1,62 @@
-/*region page style*/
+.region-page__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 36px;
+    width: 100%;
+  }
+  
+  .region-page__title h2 {
+    padding-left: 10px;
+    color: #252733;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 24px;
+    flex-grow: 1;
+  }
+  .region-page__icon-title {
+    font-size: 25px;
+    padding-left: 15px;
+    color: #252733;
+  }
+
+  .region-page__icons {
+    display: flex;
+    margin-right: 20px;
+    color: #C5C7CD;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .region-page__icon-container {
+    padding: 5px;
+  }
+  .region-page__icon-container:hover {
+    color: #252733;
+    cursor: pointer;
+  }
+  
+  .region-page__user {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .region-page__user-name {
+    color: #252733;
+    margin-right: 10px;
+  }
+  .region-page__user-avatar{
+    margin-right: 25px;
+    border-radius: 50%;
+  }
+
+  .region-page__separator {
+    margin-right: 20px;
+    border: 1px solid #C5C7CD;
+    width: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+  

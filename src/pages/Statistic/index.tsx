@@ -12,37 +12,37 @@ const Statistic = () => {
   return (
     <>
       <PageTitle>Statistic Page</PageTitle>
-      <div className="camera-page">
-        <div className="camera-page__title">
-          <span className="camera-page__icon-title">
+      <div className="statistic-page">
+        <div className="statistic-page__title">
+          <span className="statistic-page__icon-title">
             <VideoCameraAddOutlined />
           </span>
-          <h2>Khu vực</h2>
-          <div className="camera-page__icons">
-            <span className="camera-page__icon-container">
+          <h2>Thống kê</h2>
+          <div className="statistic-page__icons">
+            <span className="statistic-page__icon-container">
               <FontAwesomeIcon
                 icon={faSearch}
-                className="camera-page__search-icon"
+                className="statistic-page__search-icon"
                 width={20}
                 height={20}
               />
             </span>
-            <span className="camera-page__icon-container">
+            <span className="statistic-page__icon-container">
               <FontAwesomeIcon
                 icon={faBell}
-                className="camera-page__bell-icon"
+                className="statistic-page__bell-icon"
                 width={20}
                 height={20}
               />
             </span>
           </div>
-          <div className="camera-page__separator">|</div>
-          <div className="camera-page__user">
-            <p className="camera-page__user-name">NguyenNhuSam</p>
+          <div className="statistic-page__separator">|</div>
+          <div className="statistic-page__user">
+            <p className="statistic-page__user-name">NguyenNhuSam</p>
             <img
               src={Logo}
               alt="logo"
-              className="camera-page__user-avatar"
+              className="statistic-page__user-avatar"
               width={30}
               height={30}
             />

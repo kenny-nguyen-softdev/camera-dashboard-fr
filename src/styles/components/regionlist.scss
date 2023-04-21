@@ -1,1 +1,78 @@
-/*region list style*/
+.region-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 1120px;
+    height: 279px;
+    margin: 90px;
+  }
+.region-list__title {
+    color: #000;
+    width: 398px;
+    height: 24px;
+    font-size: 20px;
+    margin-left: 32px;
+    margin-bottom: 200px;
+}
+.region-list__sort,
+.region-list__filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7B8FA1;
+}
+
+.region-list__sort{
+    margin-left: 500px;
+}
+
+
+.region-list__sort-icon,
+.region-list__filter-icon {
+    font-size: 19px;
+    margin-right: 8px;
+    margin-bottom: 200px;
+}
+
+.region-list__sort-title,
+.region-list__filter-title {
+    margin-right: 25px;
+    margin-bottom: 200px;
+}
+
+.region-list__table {
+    position: absolute;
+    margin-top: 32px;
+    z-index: 1;
+    color: #000;
+  }
+  
+  table {
+    width: 1120px;
+    height: 150px;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  .selected {
+    color: #7B8FA1;
+  }
+
