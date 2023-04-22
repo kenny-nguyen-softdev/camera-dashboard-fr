@@ -14,20 +14,26 @@ const Home = () => {
               <Col span={12} className="name-box">Tổng Camera</Col>
               <h2>4</h2>
             </Row>
-            <Row>
+            <Row className="ant-row-videos">
               <Col span={12}>
-                <VideoDisplay streamUrl={streamUrl} />
+                <div className="home-page__video-display">
+                  <VideoDisplay streamUrl={streamUrl} />
+                </div>
               </Col>
               <Col span={12}>
-                <VideoDisplay streamUrl={streamUrl} />
-              </Col>
-            </Row>
-            <Row>
-              <Col span={12}>
-                <VideoDisplay streamUrl={streamUrl} />
+                <div className="home-page__video-display">
+                  <VideoDisplay streamUrl={streamUrl} />
+                </div>
               </Col>
               <Col span={12}>
-                <VideoDisplay streamUrl={streamUrl} />
+                <div className="home-page__video-display">
+                  <VideoDisplay streamUrl={streamUrl} />
+                </div>
+              </Col>
+              <Col span={12}>
+                <div className="home-page__video-display">
+                  <VideoDisplay streamUrl={streamUrl} />
+                </div>
               </Col>
             </Row>
           </div>

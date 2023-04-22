@@ -5,15 +5,17 @@ const CameraList: React.FC = () => {
 
     return ( 
     <div className="camera-list">
-        <div className="camera-list__title">Camera</div>
-        <div className="camera-list__sort">
-            <SortDescendingOutlined className='camera-list__sort-icon'/>
-            <p className="camera-list__sort-title">Sort</p>
+        <div className="camera-list__title">Camera
+            <div className="camera-list__sort">
+                <SortDescendingOutlined className='camera-list__sort-icon'/>
+                <p className="camera-list__sort-title">Sort</p>
+            </div>
+            <div className="camera-list__filter">
+                <FilterOutlined className='camera-list__filter-icon'/>
+                <p className="camera-list__filter-title">Filter</p>
+            </div>
         </div>
-        <div className="camera-list__filter">
-            <FilterOutlined className='camera-list__filter-icon'/>
-            <p className="camera-list__filter-title">Filter</p>
-        </div>
+        
         <div className="camera-list__table">
             <table>
                 <thead>

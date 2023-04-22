@@ -2,15 +2,17 @@ import  {SortDescendingOutlined, FilterOutlined } from '@ant-design/icons'
 const RegionList: React.FC = () => {
   return (
     <div className="region-list">
-        <div className="region-list__title">Home</div>
-        <div className="region-list__sort">
-            <SortDescendingOutlined className='region-list__sort-icon'/>
-            <p className="region-list__sort-title">Sort</p>
+        <div className="region-list__title">Home
+            <div className="region-list__sort">
+                <SortDescendingOutlined className='region-list__sort-icon'/>
+                <p className="region-list__sort-title">Sort</p>
+            </div>
+            <div className="region-list__filter">
+                <FilterOutlined className='region-list__filter-icon'/>
+                <p className="region-list__filter-title">Filter</p>
+            </div>
         </div>
-        <div className="region-list__filter">
-            <FilterOutlined className='region-list__filter-icon'/>
-            <p className="region-list__filter-title">Filter</p>
-        </div>
+        
         <div className="region-list__table">
             <table>
                 <thead>

@@ -11,10 +11,12 @@ import {
   LineChartOutlined,
 } from "@ant-design/icons";
 import Logo from "../../../assets/images/logo.png";
+import { NavLink, useLocation } from "react-router-dom";
 const { Sider } = Layout;
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const location = useLocation();
 
   const onCollapse = (collapsed: boolean) => {
     setCollapsed(collapsed);
@@ -27,23 +29,23 @@ const Sidebar = () => {
       onCollapse={(value) => setCollapsed(value)}
     >
       <figure className="login-page__logo-sidebar">
-        <img src={Logo} alt="logo" width={200} height={160} />
+        <img src={Logo} alt="logo" />
       </figure>
       <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-        <Menu.Item key="1" icon={<HomeOutlined />}>
-          Trang Chủ
+        <Menu.Item key="1" icon={<HomeOutlined />} className={location.pathname === '/home' ? 'active' : ''}>
+          <NavLink to="/home">Trang chủ</NavLink>
         </Menu.Item>
-        <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-          Quản lí Camera
+        <Menu.Item key="2" icon={<VideoCameraOutlined />} className={location.pathname === '/camera' ? 'active' : ''}>
+          <NavLink to="/camera">Quản lý Camera</NavLink>
         </Menu.Item>
-        <Menu.Item key="3" icon={<WarningOutlined />}>
-          Cảnh báo
+        <Menu.Item key="3" icon={<WarningOutlined />} className={location.pathname === '/warning' ? 'active' : ''}>
+          <NavLink to="/warning">Cảnh báo</NavLink>
         </Menu.Item>
-        <Menu.Item key="4" icon={<BorderOuterOutlined />}>
-          Khu vực
+        <Menu.Item key="4" icon={<BorderOuterOutlined />} className={location.pathname === '/region' ? 'active' : ''}>
+          <NavLink to="/region">Khu vực</NavLink>
         </Menu.Item>
-        <Menu.Item key="5" icon={<LineChartOutlined />}>
-          Thống kê
+        <Menu.Item key="5" icon={<LineChartOutlined />} className={location.pathname === '/statistic' ? 'active' : ''}>
+          <NavLink to="/statistic">Thống kê</NavLink>
         </Menu.Item>
         <Menu.Item key="6" icon={<ContactsOutlined />}>
           Liên hệ

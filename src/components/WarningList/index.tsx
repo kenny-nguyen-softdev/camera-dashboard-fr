@@ -3,15 +3,17 @@ import  {SortDescendingOutlined, FilterOutlined, } from '@ant-design/icons'
 const WarningList: React.FC = () => {
   return (
     <div className="warning-list">
-        <div className="warning-list__title">Lịch sử cảnh báo</div>
-        <div className="warning-list__sort">
-            <SortDescendingOutlined className='warning-list__sort-icon'/>
-            <p className="warning-list__sort-title">Sort</p>
+        <div className="warning-list__title">Lịch sử cảnh báo
+            <div className="warning-list__sort">
+                <SortDescendingOutlined className='warning-list__sort-icon'/>
+                <p className="warning-list__sort-title">Sort</p>
+            </div>
+            <div className="warning-list__filter">
+                <FilterOutlined className='warning-list__filter-icon'/>
+                <p className="warning-list__filter-title">Filter</p>
+            </div>
         </div>
-        <div className="warning-list__filter">
-            <FilterOutlined className='warning-list__filter-icon'/>
-            <p className="warning-list__filter-title">Filter</p>
-        </div>
+        
         <div className="warning-list__table">
             <table>
                 <thead>
