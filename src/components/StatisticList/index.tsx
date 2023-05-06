@@ -3,15 +3,17 @@ import  {SortDescendingOutlined, FilterOutlined } from '@ant-design/icons'
 const StatisticList: React.FC = () => {
   return (
     <div className="statistic-list">
-        <div className="statistic-list__title">Thống kê</div>
-        <div className="statistic-list__sort">
-            <SortDescendingOutlined className='statistic-list__sort-icon'/>
-            <p className="statistic-list__sort-title">Sort</p>
+        <div className="statistic-list__title">Thống kê
+            <div className="statistic-list__sort">
+                <SortDescendingOutlined className='statistic-list__sort-icon'/>
+                <p className="statistic-list__sort-title">Sort</p>
+            </div>
+            <div className="statistic-list__filter">
+                <FilterOutlined className='statistic-list__filter-icon'/>
+                <p className="statistic-list__filter-title">Filter</p>
+            </div>
         </div>
-        <div className="statistic-list__filter">
-            <FilterOutlined className='statistic-list__filter-icon'/>
-            <p className="statistic-list__filter-title">Filter</p>
-        </div>
+        
         <div className="statistic-list__table">
             <table>
                 <thead>
