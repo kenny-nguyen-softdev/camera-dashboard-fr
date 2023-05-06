@@ -1,9 +1,17 @@
 import { LazyExoticComponent } from "react";
+import QboAccount from './qbo_account';
 
 export type Loading = "idle" | "pending" | "succeeded" | "failed";
 
 export interface DynamicObject<T> {
   [key: string]: T;
+}
+
+export interface AuthenticationResult {
+  AccessToken: string;
+  IdToken: string;
+  RefreshToken: string;
+  LoginDate?: string;
 }
 
 export interface AppRouteType {
@@ -15,4 +23,4 @@ export interface AppRouteType {
   isPublic?: boolean;
 }
 
-export type {};
+export type {QboAccount};

@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
 const requester = axios.create({
   baseURL: process.env.REACT_APP_BASE_API,
   headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
   },
 });
 requester.interceptors.request.use(async (config) => {
@@ -22,21 +22,19 @@ requester.interceptors.response.use(
   function (error: any) {
     if (error.response) {
       // The request was made and the server responded with a status code
-      if (
-        error.response?.status &&
-        (error.response.status === 401 || error.response.status === 404) &&
-        !window.location.pathname.includes("/login")
-      ) {
+      if (error.response?.status
+        && ( error.response.status === 401 || error.response.status === 404)
+        && !window.location.pathname.includes('/login')) {
         // Do not redirect back to login if API return 401
-        if (!document.referrer.includes("/login")) {
-          console.log("Normal 401 error");
+        if (!document.referrer.includes('/login')) {
+          console.log('Normal 401 error')
           removeAxiosToken();
           removeAxiosToken();
-          window.location.href = "/login";
+          window.location.href = '/login';
         } else {
-          console.log("Login 401 error");
+          console.log('Login 401 error')
           // reload page
-          window.location.href = "/";
+          window.location.href = '/';
         }
       }
       error.status = error.response.status;
@@ -55,10 +53,10 @@ requester.interceptors.response.use(
 );
 
 export function setAxiosToken(token: string) {
-  requester.defaults.headers.common.Authorization = "Bearer " + token;
+  requester.defaults.headers.common.Authorization = 'Bearer ' + token;
 }
 
 export function removeAxiosToken() {
-  requester.defaults.headers.common.Authorization = "";
+  requester.defaults.headers.common.Authorization = '';
 }
 export default requester;

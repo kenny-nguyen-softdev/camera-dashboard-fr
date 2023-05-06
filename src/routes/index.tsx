@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { AppRouteType } from "../models";
 import { Spinner } from "../components/Common";
 import BasePage from "../components/Layout/BasePage/BasePage";
+import useAuthContext from "../store/auth-context";
 
 const Login = lazy(() => import("../pages/Login"));
 const Home = lazy(() => import("../pages/Home"));
@@ -27,37 +28,46 @@ export const routes: AppRouteType[] = [
   },
   {
     name: "Home",
-    auth: false,
+    auth: true,
     path: "/home",
     component: Home,
   },
   {
     name: "Camera",
-    auth: false,
+    auth: true,
     path: "/camera",
     component: Camera,
   },
   {
     name: "Warning",
-    auth: false,
+    auth: true,
     path: "/warning",
     component: Warning,
   },
   {
     name: "Region",
-    auth: false,
+    auth: true,
     path: "/region",
     component: Region,
   },
   {
     name: "Statistic",
-    auth: false,
+    auth: true,
     path: "/statistic",
     component: Statistic,
   },
 ];
 
+const landingRoute = routes.find(
+  (route) => route.name === "Home"
+) as AppRouteType;
+export const landingPage = landingRoute;
+
 export default function RoutesAppRoutes() {
+  const { idToken } = useAuthContext();
+
+  console.log(idToken);
+
   const publicRoutes = routes
     .filter((route) => !route.auth || route.isPublic)
     .map((route) => (
@@ -68,11 +78,23 @@ export default function RoutesAppRoutes() {
       />
     ));
 
-  // return <Routes>{publicRoutes}</Routes>;
+  // public routes
+  if (!idToken) return <Routes>{publicRoutes}</Routes>;
+
+  // authenticated routes
+  const authenticatedRoutes = routes
+    .filter((route) => route.auth || route.isPublic)
+    .map((route) => (
+      <Route
+        key={route.path}
+        path={route.path}
+        element={waitFor(route.component)}
+      />
+    ));
 
   return (
     <BasePage>
-      <Routes>{publicRoutes}</Routes>
+      <Routes>{authenticatedRoutes}</Routes>
     </BasePage>
   );
 }

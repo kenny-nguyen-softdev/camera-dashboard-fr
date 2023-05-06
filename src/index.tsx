@@ -6,10 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import store from "./store";
 import "./styles/main.scss";
-
-
-
-
+import { AuthContextProvider } from './store/auth-context';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,10 +14,12 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename={"/"}>
-        <HelmetProvider>
-          <App />
-        </HelmetProvider>
+      <BrowserRouter basename={`${process.env.REACT_APP_BASE_PATH}`}>
+        <AuthContextProvider>
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
+        </AuthContextProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
