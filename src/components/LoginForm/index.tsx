@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import {
-  Row,
-  Col,
   Form,
   Input,
   Button,
@@ -16,8 +14,8 @@ const LoginForm: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const { onSignIn, loading } = useAuthContext();
 
-  const validateEmail = (email: string) => {
-    return String(email)
+  const validateEmail = (userName: string) => {
+    return String(userName)
       .toLowerCase()
       .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -25,47 +23,50 @@ const LoginForm: React.FC = () => {
   };
 
   const onFinish = async ({
-    email,
+    userName,
     password,
   }: {
-    email: string;
+    userName: string;
     password: string;
   }) => {
     try {
-      if (email && password) {
-        email = email.trim();
+      if (userName && password) {
+        userName = userName.trim();
         password = password.trim();
-        const validate = validateEmail(email);
-        if (validate && validate.length) {
+        // const validate = validateEmail(userName);
+        if (true) {
           await onSignIn({
-            email,
+            userName,
             password,
           });
         } else {
-          throw Error("email invalid");
+          throw Error("userName invalid");
         }
       } else {
-        throw Error("email password null");
+        throw Error("userName password null");
       }
     } catch (error: any) {
-      toast.error(error?.message === "email password null"
-            ? "Veuillez saisir votre email et votre mot de passe"
-            : error?.message === "email invalid"
-            ? `L'entrée n'est pas valide`
-            : "Email ou mot de passe incorrect !", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      toast.error(
+        error?.message === "userName password null"
+          ? "Veuillez saisir votre userName et votre mot de passe"
+          : error?.message === "userName invalid"
+          ? `L'entrée n'est pas valide`
+          : "Email ou mot de passe incorrect !",
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        }
+      );
       setError(
-        error?.message === "email password null"
+        error?.message === "userName password null"
           ? "Email ou mot de passe incorrect !"
-          : error?.message === "email invalid"
+          : error?.message === "userName invalid"
           ? `L'entrée n'est pas valide`
           : "Email ou mot de passe incorrect !"
       );
@@ -87,7 +88,7 @@ const LoginForm: React.FC = () => {
             <h3 className="login-form__title1">Camera Dashboard</h3>
             <h1 className="login-form__title2">Log In</h1>
             <h4 className="login-form__title3">
-              Enter your email and password below
+              Enter your userName and password below
             </h4>
             <Form
               name="basic"
@@ -95,38 +96,47 @@ const LoginForm: React.FC = () => {
               autoComplete="off"
               form={form}
             >
+              <label htmlFor="userName">Username: </label>
               <Form.Item
-                name="email"
-                className="login-form__input-email"
-                // rules={[
-                //   { type: "email", message: `Please enter true email format!` },
-                //   { required: true, message: `Please enter your email!` },
-                // ]}
+                name="userName"
+                className="login-form__input-userName"
+                rules={
+                  [
+                    // { type: "userName", message: `Please enter true userName format!` },
+                    // { required: true, message: `Please enter your userName!` },
+                  ]
+                }
               >
-                <label htmlFor="email">Email: </label>
-                <Input id="email" placeholder="Email address" />
+                <Input
+                  id="userName"
+                  placeholder="username"
+                  autoComplete="userName"
+                />
               </Form.Item>
+              <label htmlFor="password">Password: </label>
               <Form.Item
                 name="password"
                 className="login-form__input-password"
-                // rules={[
-                //   {
-                //     required: true,
-                //     message: "Please enter your password!",
-                //   },
-                // ]}
+                rules={
+                  [
+                    // {
+                    //   required: true,
+                    //   message: "Please enter your password!",
+                    // },
+                  ]
+                }
               >
-                <label htmlFor="password">Password: </label>
                 <Input.Password
                   id="password"
                   type="password"
                   placeholder="Password"
+                  autoComplete="password"
                 />
               </Form.Item>
               <Button htmlType="submit" className="login-form__login" block>
                 Log In
               </Button>
-              <Form.Item style={{ marginBottom: 0 }}>
+              {/* <Form.Item style={{ marginBottom: 0 }}>
                 <Row>
                   <Col span={24} style={{ textAlign: "left" }}>
                     <Button type="text" className="login-form__contact">
@@ -135,7 +145,7 @@ const LoginForm: React.FC = () => {
                     </Button>
                   </Col>
                 </Row>
-              </Form.Item>
+              </Form.Item> */}
             </Form>
           </div>
         </div>

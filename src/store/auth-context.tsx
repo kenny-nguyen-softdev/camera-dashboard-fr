@@ -42,7 +42,7 @@ interface AuthContextType {
   idToken: null | string | undefined;
   profile: null | QboAccount;
   isAuth: boolean;
-  onSignIn: (credentials: { email: string; password: string }) => Promise<any>;
+  onSignIn: (credentials: { userName: string; password: string }) => Promise<any>;
   onSignOut: () => void;
   onRefreshToken: () => void;
   getProfile: () => void;
@@ -80,7 +80,7 @@ export function AuthContextProvider({ children }: { children: ReactNode }) {
     matchPath(_.path, location.pathname) ? true : false
   );
 
-  const onSignIn = async (credentials: { email: string; password: string }) => {
+  const onSignIn = async (credentials: { userName: string; password: string }) => {
     try {
       setUserData({ loading: true });
       const { AuthenticationResult } = await accountService.signIn(credentials);
