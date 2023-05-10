@@ -66,8 +66,6 @@ export const landingPage = landingRoute;
 export default function RoutesAppRoutes() {
   const { idToken } = useAuthContext();
 
-  console.log(idToken);
-
   const publicRoutes = routes
     .filter((route) => !route.auth || route.isPublic)
     .map((route) => (

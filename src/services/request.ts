@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { getIdToken } from './token.service';
 
 const requester = axios.create({
   baseURL: process.env.REACT_APP_BASE_API,
@@ -8,10 +9,12 @@ const requester = axios.create({
   },
 });
 requester.interceptors.request.use(async (config) => {
-  // const session = await getSession({ req })
-  // if (token) {
-  //   config.headers.Authorization = `Bearer ${token}`;
-  // }
+  const idToken = getIdToken();
+  if (idToken) {
+    config.headers.Authorization = `Bearer ${idToken}`;
+  } else {
+    config.headers.Authorization = undefined;
+  }
   return config;
 });
 // Add a response interceptor

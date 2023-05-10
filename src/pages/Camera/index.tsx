@@ -1,4 +1,3 @@
-import { link } from "fs";
 import CameraList from "../../components/CameraList";
 import { PageTitle } from "../../components/Common";
 
@@ -8,7 +7,6 @@ import { faBell, faSearch, } from '@fortawesome/free-solid-svg-icons';
 import  {VideoCameraAddOutlined,} from '@ant-design/icons'
 
 import Logo from "../../assets/images/img_user.jpg";
-
 
 const Camera = () => {
   return (

@@ -1,4 +1,3 @@
-import QboAccount from '../models/qbo_account';
 import requester from './request';
 import { AuthenticationResult } from '../models';
 
@@ -18,7 +17,7 @@ const accountService = {
       }
     ),
   profile: (data: { accessToken: string | undefined }) =>
-    requester.post<{ user: QboAccount }>("/user-profile", data),
+    requester.post("/user-profile", data),
   forgetPassword: (query: any) => requester.post("/forget-password", query),
 };
 

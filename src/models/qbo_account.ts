@@ -1,5 +1,7 @@
-export default interface QboAccount {
+export default interface Account {
   id: number;
+  name: string;
   email: string;
-  password_show: string;
+  password: string;
+  user_name: string;
 }

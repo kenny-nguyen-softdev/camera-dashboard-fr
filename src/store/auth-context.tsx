@@ -9,7 +9,7 @@ import moment from "moment";
 import { routes } from "../routes";
 import { accountService } from "../services";
 import { Spinner } from "../components/Common";
-import { AppRouteType, DynamicObject, QboAccount } from "../models";
+import { AppRouteType, DynamicObject, Account } from "../models";
 import { landingPage } from "../routes";
 import {
   createSearchParams,
@@ -40,7 +40,7 @@ interface AuthContextType {
   loading: boolean;
   accessToken: null | string | undefined;
   idToken: null | string | undefined;
-  profile: null | QboAccount;
+  profile: null | Account;
   isAuth: boolean;
   onSignIn: (credentials: { userName: string; password: string }) => Promise<any>;
   onSignOut: () => void;
