@@ -69,9 +69,9 @@ const WarningList: React.FC = () => {
                   <input type="checkbox" className="row-checkbox" />
                 </td>
                 <td>{warning.content}</td>
-                <td>{warning.content}</td>
-                <td>{warning.content}</td>
-                <td>{warning.content}</td>
+                <td>{warning.camera?.home_id}</td>
+                <td>{warning.camera?.serial}</td>
+                <td>{warning.level}</td>
               </tr>
             ))}
           </tbody>
