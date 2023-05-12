@@ -47,14 +47,14 @@ const Sidebar = () => {
         <Menu.Item key="5" icon={<LineChartOutlined />} className={location.pathname === '/statistic' ? 'active' : ''}>
           <NavLink to="/statistic">Thống kê</NavLink>
         </Menu.Item>
-        <Menu.Item key="6" icon={<ContactsOutlined />}>
-          Liên hệ
+        <Menu.Item key="6" icon={<ContactsOutlined />} className={location.pathname === '/contact' ? 'active' : ''}>
+          <NavLink to="/contact">Liên hệ</NavLink>
         </Menu.Item>
-        <Menu.Item key="7" icon={<SettingOutlined />}>
-          Cài đặt
+        <Menu.Item key="7" icon={<SettingOutlined />} className={location.pathname === '/setting' ? 'active' : ''}>
+          <NavLink to="/setting">Cài đặt</NavLink>
         </Menu.Item>
-        <Menu.Item key="8" icon={<AppstoreAddOutlined />}>
-          Đăng kí
+        <Menu.Item key="8" icon={<AppstoreAddOutlined />} className={location.pathname === '/register' ? 'active' : ''}>
+          <NavLink to="/register">Đăng kí</NavLink>
         </Menu.Item>
       </Menu>
     </Sider>

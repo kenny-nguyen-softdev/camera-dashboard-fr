@@ -12,6 +12,9 @@ const Camera = lazy(() => import("../pages/Camera"));
 const Warning = lazy(() => import("../pages/Warning"));
 const Region = lazy(() => import("../pages/Region"));
 const Statistic = lazy(() => import("../pages/Statistic"));
+const Contact = lazy(() => import("../pages/Contact"));
+const Setting = lazy(() => import("../pages/Setting"));
+const Register = lazy(() => import("../pages/Register"));
 
 const waitFor = (Tag: React.LazyExoticComponent<() => JSX.Element | null>) => (
   <Suspense fallback={<Spinner />}>
@@ -55,6 +58,24 @@ export const routes: AppRouteType[] = [
     auth: true,
     path: "/statistic",
     component: Statistic,
+  },
+  {
+    name: "Contact",
+    auth: true,
+    path: "/contact",
+    component: Contact,
+  },
+  {
+    name: "Setting",
+    auth: true,
+    path: "/setting",
+    component: Setting,
+  },
+  {
+    name: "Register",
+    auth: true,
+    path: "/register",
+    component: Register,
   },
 ];
 

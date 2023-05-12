@@ -1,0 +1,62 @@
+.register-page__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 36px;
+    width: 100%;
+  }
+  
+  .register-page__title h2 {
+    padding-left: 10px;
+    color: #252733;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 24px;
+    flex-grow: 1;
+  }
+  .register-page__icon-title {
+    font-size: 25px;
+    padding-left: 15px;
+    color: #252733;
+  }
+
+  .register-page__icons {
+    display: flex;
+    margin-right: 20px;
+    color: #C5C7CD;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .register-page__icon-container {
+    padding: 5px;
+  }
+  .register-page__icon-container:hover {
+    color: #252733;
+    cursor: pointer;
+  }
+  
+  .register-page__user {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .register-page__user-name {
+    color: #252733;
+    margin-right: 10px;
+  }
+  .register-page__user-avatar{
+    margin-right: 25px;
+    border-radius: 50%;
+  }
+
+  .register-page__separator {
+    margin-right: 20px;
+    border: 1px solid #C5C7CD;
+    width: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+  
