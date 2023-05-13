@@ -1,14 +1,13 @@
 import { PageTitle } from "../../components/Common";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faSearch } from "@fortawesome/free-solid-svg-icons";
-
 import { VideoCameraAddOutlined } from "@ant-design/icons";
-
 import Logo from "../../assets/images/img_user.jpg";
 import RegionList from "../../components/RegionList";
+import useAuthContext from "../../store/auth-context";
 
 const Region = () => {
+  const { profile } = useAuthContext();
   return (
     <>
       <PageTitle>Region Page</PageTitle>
@@ -38,7 +37,7 @@ const Region = () => {
           </div>
           <div className="region-page__separator">|</div>
           <div className="region-page__user">
-            <p className="region-page__user-name">NguyenNhuSam</p>
+            <p className="region-page__user-name">{profile?.name}</p>
             <img
               src={Logo}
               alt="logo"

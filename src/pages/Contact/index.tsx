@@ -2,11 +2,13 @@ import { PageTitle } from "../../components/Common";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { VideoCameraAddOutlined } from "@ant-design/icons";
-
 import Logo from "../../assets/images/img_user.jpg";
 import ContactList from "../../components/ContactList";
+import useAuthContext from "../../store/auth-context";
 
 const Contact = () => {
+  const { profile } = useAuthContext();
+
     return (
       <>
         <PageTitle>Contact Page</PageTitle>
@@ -36,7 +38,7 @@ const Contact = () => {
             </div>
             <div className="contact-page__separator">|</div>
             <div className="contact-page__user">
-              <p className="contact-page__user-name">NguyenNhuSam</p>
+              <p className="contact-page__user-name">{profile?.name}</p>
               <img
                 src={Logo}
                 alt="logo"

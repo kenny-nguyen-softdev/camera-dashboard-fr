@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faSearch } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../../assets/images/img_user.jpg";
 import WarningSettingForm from "../../components/WarningSettingForm";
+import useAuthContext from "../../store/auth-context";
 
 const WarningSetting = () => {
+  const { profile } = useAuthContext();
+
   return (
     <>
       <PageTitle>Cài đặt cảnh báo</PageTitle>
@@ -35,7 +38,7 @@ const WarningSetting = () => {
           </div>
           <div className="setting-page__separator">|</div>
           <div className="setting-page__user">
-            <p className="setting-page__user-name">NguyenNhuSam</p>
+            <p className="setting-page__user-name">{profile?.name}</p>
             <img
               src={Logo}
               alt="logo"

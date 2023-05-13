@@ -5,8 +5,10 @@ import { VideoCameraAddOutlined } from "@ant-design/icons";
 
 import Logo from "../../assets/images/img_user.jpg";
 import SettingList from "../../components/SettingList";
+import useAuthContext from "../../store/auth-context";
 
 const Setting = () => {
+    const { profile } = useAuthContext();
     return (
       <>
         <PageTitle>Setting Page</PageTitle>
@@ -36,7 +38,7 @@ const Setting = () => {
             </div>
             <div className="setting-page__separator">|</div>
             <div className="setting-page__user">
-              <p className="setting-page__user-name">NguyenNhuSam</p>
+              <p className="setting-page__user-name">{profile?.name}</p>
               <img
                 src={Logo}
                 alt="logo"

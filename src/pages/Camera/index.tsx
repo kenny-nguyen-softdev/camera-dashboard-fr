@@ -7,8 +7,11 @@ import { faBell, faSearch, } from '@fortawesome/free-solid-svg-icons';
 import  {VideoCameraAddOutlined,} from '@ant-design/icons'
 
 import Logo from "../../assets/images/img_user.jpg";
+import useAuthContext from "../../store/auth-context";
 
 const Camera = () => {
+  const { profile } = useAuthContext();
+
   return (
     <>
       <PageTitle>Camera Management Page</PageTitle>
@@ -28,7 +31,7 @@ const Camera = () => {
           </div>
           <div className="camera-page__separator">|</div>
           <div className="camera-page__user">
-            <p className="camera-page__user-name">NguyenNhuSam</p>
+            <p className="camera-page__user-name">{profile?.name}</p>
             <img src={Logo} alt="logo" className="camera-page__user-avatar" width={30} height={30}/>
           </div>
         </div>

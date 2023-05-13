@@ -8,8 +8,11 @@ import { VideoCameraAddOutlined, CheckCircleFilled, DeleteFilled, SettingFilled 
 import Logo from "../../assets/images/img_user.jpg";
 import WarningList from "../../components/WarningList";
 import { NavLink } from "react-router-dom";
+import useAuthContext from "../../store/auth-context";
 
 const Camera = () => {
+  const { profile } = useAuthContext();
+
   return (
     <>
       <PageTitle>Warning Page</PageTitle>
@@ -39,7 +42,7 @@ const Camera = () => {
           </div>
           <div className="warning-page__separator">|</div>
           <div className="warning-page__user">
-            <p className="warning-page__user-name">NguyenNhuSam</p>
+            <p className="warning-page__user-name">{profile?.name}</p>
             <img
               src={Logo}
               alt="logo"
