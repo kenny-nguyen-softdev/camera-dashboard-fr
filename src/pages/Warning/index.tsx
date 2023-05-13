@@ -7,6 +7,7 @@ import { VideoCameraAddOutlined, CheckCircleFilled, DeleteFilled, SettingFilled 
 
 import Logo from "../../assets/images/img_user.jpg";
 import WarningList from "../../components/WarningList";
+import { NavLink } from "react-router-dom";
 
 const Camera = () => {
   return (
@@ -49,23 +50,22 @@ const Camera = () => {
           </div>
         </div>
 
-        <div className='warning-list__operation'>
-            <ul>
-                <li>
-                    <CheckCircleFilled className='warning-list__check-icon'/>
-                    Đánh dấu đã đọc
-                </li>
-                <li>
-                    <DeleteFilled className='warning-list__delete-icon'/>
-                    Xóa thông báo
-                </li>
-                <li>
-                    <SettingFilled className='warning-list__setting-icon'/>
-                    Cài đặt cảnh báo
-                </li>
-            </ul>
+        <div className="warning-list__operation">
+          <ul>
+            <li>
+              <SettingFilled className="warning-list__setting-icon" />
+              <NavLink to="/warning-setting">Cài đặt cảnh báo</NavLink>
+            </li>
+            <li>
+              <CheckCircleFilled className="warning-list__check-icon" />
+              Đánh dấu đã đọc
+            </li>
+            <li>
+              <DeleteFilled className="warning-list__delete-icon" />
+              Xóa thông báo
+            </li>
+          </ul>
         </div>
-
       </div>
       <WarningList />
     </>

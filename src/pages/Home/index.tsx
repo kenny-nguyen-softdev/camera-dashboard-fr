@@ -22,7 +22,7 @@ const Home = () => {
       .then(() => {
         setIsLoading(false);
       })
-      .catch((error) => {
+      .catch((error: any) => {
         setIsLoading(false);
         notification.error({
           message: "Error",

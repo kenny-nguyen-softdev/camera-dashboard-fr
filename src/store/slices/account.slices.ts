@@ -30,7 +30,7 @@ export const forgetPassword = createAsyncThunk(
     try {
       const response = await accountService.forgetPassword(credentials);
       return response;
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       return rejectWithValue(error);
     }
@@ -43,7 +43,7 @@ export const fetchCameras = createAsyncThunk(
     try {
       const response = await cameraService.getCameras();
       return response;
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       return rejectWithValue(error);
     }
@@ -56,7 +56,7 @@ export const fetchRegions = createAsyncThunk(
     try {
       const response = await regionService.getRegions();
       return response;
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       return rejectWithValue(error);
     }
@@ -69,7 +69,7 @@ export const fetchWarnings = createAsyncThunk(
     try {
       const response = await warningService.getWarnings();
       return response;
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       return rejectWithValue(error);
     }
