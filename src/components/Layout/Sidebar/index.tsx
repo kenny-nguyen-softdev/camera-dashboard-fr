@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Layout, Menu } from "antd";
+import { Button, Layout, Menu } from "antd";
 import {
   HomeOutlined,
   VideoCameraOutlined,
@@ -12,9 +12,11 @@ import {
 } from "@ant-design/icons";
 import Logo from "../../../assets/images/logo.png";
 import { NavLink, useLocation } from "react-router-dom";
+import useAuthContext from "../../../store/auth-context";
 const { Sider } = Layout;
 
 const Sidebar = () => {
+  const { onSignOut } = useAuthContext();
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
 
@@ -32,31 +34,68 @@ const Sidebar = () => {
         <img src={Logo} alt="logo" />
       </figure>
       <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-        <Menu.Item key="1" icon={<HomeOutlined />} className={location.pathname === '/home' ? 'active' : ''}>
+        <Menu.Item
+          key="1"
+          icon={<HomeOutlined />}
+          className={location.pathname === "/home" ? "active" : ""}
+        >
           <NavLink to="/home">Trang chủ</NavLink>
         </Menu.Item>
-        <Menu.Item key="2" icon={<VideoCameraOutlined />} className={location.pathname === '/camera' ? 'active' : ''}>
+        <Menu.Item
+          key="2"
+          icon={<VideoCameraOutlined />}
+          className={location.pathname === "/camera" ? "active" : ""}
+        >
           <NavLink to="/camera">Quản lý Camera</NavLink>
         </Menu.Item>
-        <Menu.Item key="3" icon={<WarningOutlined />} className={location.pathname === '/warning' ? 'active' : ''}>
+        <Menu.Item
+          key="3"
+          icon={<WarningOutlined />}
+          className={location.pathname === "/warning" ? "active" : ""}
+        >
           <NavLink to="/warning">Cảnh báo</NavLink>
         </Menu.Item>
-        <Menu.Item key="4" icon={<BorderOuterOutlined />} className={location.pathname === '/region' ? 'active' : ''}>
+        <Menu.Item
+          key="4"
+          icon={<BorderOuterOutlined />}
+          className={location.pathname === "/region" ? "active" : ""}
+        >
           <NavLink to="/region">Khu vực</NavLink>
         </Menu.Item>
-        <Menu.Item key="5" icon={<LineChartOutlined />} className={location.pathname === '/statistic' ? 'active' : ''}>
+        <Menu.Item
+          key="5"
+          icon={<LineChartOutlined />}
+          className={location.pathname === "/statistic" ? "active" : ""}
+        >
           <NavLink to="/statistic">Thống kê</NavLink>
         </Menu.Item>
-        <Menu.Item key="6" icon={<ContactsOutlined />} className={location.pathname === '/contact' ? 'active' : ''}>
+        <Menu.Item
+          key="6"
+          icon={<ContactsOutlined />}
+          className={location.pathname === "/contact" ? "active" : ""}
+        >
           <NavLink to="/contact">Liên hệ</NavLink>
         </Menu.Item>
-        <Menu.Item key="7" icon={<SettingOutlined />} className={location.pathname === '/setting' ? 'active' : ''}>
+        <Menu.Item
+          key="7"
+          icon={<SettingOutlined />}
+          className={location.pathname === "/setting" ? "active" : ""}
+        >
           <NavLink to="/setting">Cài đặt</NavLink>
         </Menu.Item>
-        <Menu.Item key="8" icon={<AppstoreAddOutlined />} className={location.pathname === '/register' ? 'active' : ''}>
+        <Menu.Item
+          key="8"
+          icon={<AppstoreAddOutlined />}
+          className={location.pathname === "/register" ? "active" : ""}
+        >
           <NavLink to="/register">Đăng kí</NavLink>
         </Menu.Item>
       </Menu>
+      <div className="button-logout-div">
+        <Button htmlType="button" className="button-logout" onClick={onSignOut}>
+          Đăng Xuất
+        </Button>
+      </div>
     </Sider>
   );
 };

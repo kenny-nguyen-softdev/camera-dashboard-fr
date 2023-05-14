@@ -5,8 +5,10 @@ import { VideoCameraAddOutlined } from "@ant-design/icons";
 
 import Logo from "../../assets/images/img_user.jpg";
 import RegisterList from "../../components/RegisterList";
+import useAuthContext from "../../store/auth-context";
 
 const Register = () => {
+    const { profile } = useAuthContext();
     return (
       <>
         <PageTitle>Register Page</PageTitle>
@@ -36,7 +38,7 @@ const Register = () => {
             </div>
             <div className="register-page__separator">|</div>
             <div className="register-page__user">
-              <p className="register-page__user-name">NguyenNhuSam</p>
+              <p className="register-page__user-name">{profile?.name}</p>
               <img
                 src={Logo}
                 alt="logo"

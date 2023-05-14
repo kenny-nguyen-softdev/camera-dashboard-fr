@@ -1,0 +1,54 @@
+.warning-setting-form {
+    padding: 45px;
+
+    &__warning-name-setting {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    &__warning-name-label {
+        width: 159px;
+        height: 35px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.4px;
+        color: #000000;
+    }
+
+    &__warning-name-input {
+        width: 255px;
+        height: 31px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        border-radius: 8px;
+    }
+
+    &__warning-time-block {
+        margin-bottom: 24px;
+    }
+
+    &__warning-face-block {
+        margin-bottom: 24px;
+    }
+
+    &__warning-region-block {
+        margin-bottom: 24px;
+    }
+
+    &__warning-time-zone {
+        margin-right: 16px;
+    }
+
+    &__warning-face-label {
+        margin-right: 16px;
+    }
+
+    &__warning-region-label {
+        margin-right: 16px;
+    }
+}

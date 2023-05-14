@@ -15,6 +15,7 @@ const Statistic = lazy(() => import("../pages/Statistic"));
 const Contact = lazy(() => import("../pages/Contact"));
 const Setting = lazy(() => import("../pages/Setting"));
 const Register = lazy(() => import("../pages/Register"));
+const WarningSetting = lazy(() => import("../pages/WarningSetting"));
 
 const waitFor = (Tag: React.LazyExoticComponent<() => JSX.Element | null>) => (
   <Suspense fallback={<Spinner />}>
@@ -76,6 +77,12 @@ export const routes: AppRouteType[] = [
     auth: true,
     path: "/register",
     component: Register,
+  },
+  {
+    name: "WarningSetting",
+    auth: true,
+    path: "/warning-setting",
+    component: WarningSetting,
   },
 ];
 

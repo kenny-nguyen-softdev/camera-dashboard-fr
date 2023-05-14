@@ -7,8 +7,11 @@ import { VideoCameraAddOutlined } from "@ant-design/icons";
 
 import Logo from "../../assets/images/img_user.jpg";
 import StatisticList from "../../components/StatisticList";
+import useAuthContext from "../../store/auth-context";
 
 const Statistic = () => {
+  const { profile } = useAuthContext();
+
   return (
     <>
       <PageTitle>Statistic Page</PageTitle>
@@ -38,7 +41,7 @@ const Statistic = () => {
           </div>
           <div className="statistic-page__separator">|</div>
           <div className="statistic-page__user">
-            <p className="statistic-page__user-name">NguyenNhuSam</p>
+            <p className="statistic-page__user-name">{profile?.name}</p>
             <img
               src={Logo}
               alt="logo"
