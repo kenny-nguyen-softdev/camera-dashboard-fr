@@ -9,6 +9,7 @@ import {
   SettingOutlined,
   AppstoreAddOutlined,
   LineChartOutlined,
+  LogoutOutlined,
 } from "@ant-design/icons";
 import Logo from "../../../assets/images/logo.png";
 import { NavLink, useLocation } from "react-router-dom";
@@ -90,12 +91,12 @@ const Sidebar = () => {
         >
           <NavLink to="/register">Đăng kí</NavLink>
         </Menu.Item>
+
+        <Menu.Item
+          icon={<LogoutOutlined />} onClick={onSignOut}>
+          Đăng xuất
+        </Menu.Item>
       </Menu>
-      <div className="button-logout-div">
-        <Button htmlType="button" className="button-logout" onClick={onSignOut}>
-          Đăng Xuất
-        </Button>
-      </div>
     </Sider>
   );
 };

@@ -1,5 +1,6 @@
 import UserImage from "../../assets/images/img_user.jpg";
 import MecoOffice from "../../assets/images/meco_office 1.png";
+import { NavLink } from "react-router-dom";
 import { Card, Input, Typography, Image, Button, Space, DatePicker } from "antd";
 const { Text } = Typography;
 const { RangePicker } = DatePicker;
@@ -49,7 +50,9 @@ const WarningSettingForm = () => {
         <Image width={200} src={MecoOffice} />
       </Card>
       <div>
-        <Button>Cancel</Button>
+        <Button>
+          <NavLink to="/warning">Cancel</NavLink>
+        </Button>
         <Button>Save</Button>
       </div>
     </div>
